@@ -1,0 +1,13 @@
+.Shape {
+
+}
+
+.fadeOut {
+  animation: fadeOut ease 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

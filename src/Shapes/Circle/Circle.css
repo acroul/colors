@@ -1,0 +1,20 @@
+.circle-background {
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+}
+
+.circle-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  filter: drop-shadow(2px 2px 5px rgba(0, 0, 0, 0.3));
+}
+
+.circle {
+  border-radius: 50%;
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+
+  mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+  -webkit-mask-image: url("https://ucarecdn.com/9514f9b1-3bf9-4b7c-b31d-9fb8cd6af8bf/");
+}
