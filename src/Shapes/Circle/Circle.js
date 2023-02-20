@@ -30,7 +30,6 @@ const Circle = ({
     addColorFadeAnimation(circleAnimationName, fillColor1, fillColor2);
   }, startDelay);
 
-
   return (
     <div className='circle-background' id={id} style={circleBgStyles}>
       <div className='circle-wrapper' style={{ width: cellSize, height: cellSize }}>

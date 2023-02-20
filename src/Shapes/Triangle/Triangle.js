@@ -14,7 +14,6 @@ const Triangle = ({
   index,
   id,
 }) => {
-
   const triangleSize = (cellSize * 0.85);
 
   // Triangle Background

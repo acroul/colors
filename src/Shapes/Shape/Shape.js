@@ -7,7 +7,6 @@ const Shape = ({
   cellSize,
   index
 }) => {
-
   const renderShape = () => {
     const shapeProps = {
       cellSize: cellSize,
@@ -20,6 +19,7 @@ const Shape = ({
 
     const shapes = [Circle, Triangle, Square];
     const ShapeToDraw = shapes[getRandom(0, 2)];
+  
     return (
       <ShapeToDraw id={`shape${index}`} key={`shape${index}`} {...shapeProps} />
     );
