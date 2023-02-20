@@ -1,3 +1,31 @@
+export const getRenderBreakpointOptions = (windowWidth) => {
+  const XL_BREAKPOINT_OPTIONS = {
+    CELL_SIZE: 140,
+    CANVAS_PADDING: 0.1,
+  };
+  const LG_BREAKPOINT_OPTIONS = {
+    CELL_SIZE: 120,
+    CANVAS_PADDING: 0.1,
+  };
+  const MD_BREAKPOINT_OPTIONS = {
+    CELL_SIZE: 100,
+    CANVAS_PADDING: 0.1,
+  };
+  const SM_BREAKPOINT_OPTIONS = {
+    CELL_SIZE: 75,
+    CANVAS_PADDING: 0.05,
+  };
+
+  if (windowWidth >= 1600) {
+    return XL_BREAKPOINT_OPTIONS;
+  } else if (windowWidth >= 1200) {
+    return LG_BREAKPOINT_OPTIONS;
+  } else if (windowWidth >= 700) {
+    return MD_BREAKPOINT_OPTIONS;
+  }
+  return SM_BREAKPOINT_OPTIONS;
+};
+
 export const getRandom = (min, max) => {
   return Math.floor(min + Math.random() * (max + 1 - min));
 };

@@ -1,14 +1,21 @@
-import "./Canvas.css";
+import "./Canvas.scss";
 import Shape from "../Shapes/Shape/Shape";
+import { getRenderBreakpointOptions } from "../utils/utils";
 
 const Canvas = () => {
-  const NUM_ROWS = 6;
-  const NUM_COLS = 13;
-
+  const WINDOW_WIDTH = window.innerWidth;
   const WINDOW_HEIGHT = window.innerHeight;
-  const CANVAS_HEIGHT = (WINDOW_HEIGHT * 0.9);
-  const CELL_SIZE = (CANVAS_HEIGHT / NUM_ROWS);
+
+  // Determine how many rows and cols to draw, and the cell size
+  const options = getRenderBreakpointOptions(WINDOW_WIDTH);
+  const MAX_CANVAS_HEIGHT = (WINDOW_HEIGHT * (1 - options.CANVAS_PADDING));
+  const MAX_CANVAS_WIDTH = (WINDOW_WIDTH * (1 - options.CANVAS_PADDING));
+  const NUM_ROWS = Math.floor(MAX_CANVAS_HEIGHT / options.CELL_SIZE);
+  const NUM_COLS = Math.floor(MAX_CANVAS_WIDTH / options.CELL_SIZE);
+
+  const CELL_SIZE = Math.min((MAX_CANVAS_HEIGHT / NUM_ROWS), (MAX_CANVAS_WIDTH / NUM_COLS));
   const CANVAS_WIDTH = (CELL_SIZE * NUM_COLS);
+  const CANVAS_HEIGHT = (CELL_SIZE * NUM_ROWS);
 
   const canvasStyles = {
     width: CANVAS_WIDTH,
