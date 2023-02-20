@@ -11,7 +11,7 @@ export const getRandomColorCss = () => {
   const g = getRandom(0, 255);
   const b = getRandom(0, 255);
   return `rgba(${r}, ${g}, ${b}, 1.0)`;
-}
+};
 
 export const addKeyframesToDOM = (keyframes) => {
   const head = document.getElementsByTagName('head')[0];
@@ -28,4 +28,4 @@ export const addColorFadeAnimation = (name, color1, color2) => {
       100% { background-color: ${color1}; }
     }
   `);
-}
+};

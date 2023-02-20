@@ -1,0 +1,7 @@
+@import "../masks.scss";
+
+.square {
+  animation-iteration-count: infinite;
+  animation-duration: 5s;
+  @include textureMask;
+}

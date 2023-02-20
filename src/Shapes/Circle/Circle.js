@@ -1,5 +1,5 @@
-import './Circle.css';
 import { addColorFadeAnimation, getRandomFloat } from '../../utils/utils';
+import './Circle.scss';
 
 const Circle = ({
   cellSize,
@@ -10,7 +10,6 @@ const Circle = ({
   index,
   id,
 }) => {
-
   const circleBgAnimationName = `circle-bg-animation-${index}`;
   const circleBgStyles = {
     background: backgroundColor1,

@@ -1,5 +1,5 @@
-import './Square.css';
 import { addColorFadeAnimation, getRandomFloat } from '../../utils/utils';
+import './Square.scss';
 
 const Square = ({
   cellSize,

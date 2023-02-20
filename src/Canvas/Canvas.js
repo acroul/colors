@@ -16,7 +16,7 @@ const Canvas = () => {
   };
 
   const drawShapes = () => {
-    const shapesArray = Array.from(Array(NUM_ROWS * NUM_COLS))
+    const shapesArray = Array(NUM_ROWS * NUM_COLS).fill();
     return shapesArray.map((item, i) => (
       <Shape key={i} id={i} cellSize={CELL_SIZE} index={i} />
     ));
