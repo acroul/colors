@@ -7,17 +7,8 @@ const Shape = ({
   cellSize,
   index
 }) => {
-
-  // const [dummyValue, setDummyValue] = useState(0);
-  // const forceRedrawShape = () => {
-  //   document.getElementById(`shape${index}`).classList.add("fadeOut");
-  //   setTimeout(() => {
-  //     setDummyValue(dummyValue + 1);
-  //   }, 3000)
-  // };
-
   const renderShape = () => {
-    const props = {
+    const shapeProps = {
       cellSize: cellSize,
       backgroundColor1: getRandomColorCss(),
       backgroundColor2: getRandomColorCss(),
@@ -26,15 +17,11 @@ const Shape = ({
       index: index
     };
 
-    // const redrawPeriod = getRandom(10, 30) * 1000;
-    // setTimeout(() => {
-    //   forceRedrawShape();
-    // }, redrawPeriod);
-
     const shapes = [Circle, Triangle, Square];
     const ShapeToDraw = shapes[getRandom(0, 2)];
+  
     return (
-      <ShapeToDraw id={`shape${index}`} key={`shape${index}`} {...props} />
+      <ShapeToDraw id={`shape${index}`} key={`shape${index}`} {...shapeProps} />
     );
   };
 
@@ -44,7 +31,7 @@ const Shape = ({
   };
 
   return (
-    <div id={`shape${index}-parent`} className="Shape" style={shapeStyle}>
+    <div id={`shape${index}-parent`} style={shapeStyle}>
       {renderShape()}
     </div>
   );

@@ -1,16 +1,13 @@
-import './Square.css';
 import { addColorFadeAnimation, getRandomFloat } from '../../utils/utils';
+import './Square.scss';
 
 const Square = ({
   cellSize,
-  backgroundColor1,
-  backgroundColor2,
   fillColor1,
   fillColor2,
   index,
   id,
 }) => {
-
   const squareAnimationName = `square-animation-${index}`;
   const squareStyles = {
     width: (cellSize),

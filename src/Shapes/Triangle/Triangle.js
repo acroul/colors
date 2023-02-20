@@ -1,9 +1,9 @@
-import './Triangle.css';
 import {
   addColorFadeAnimation,
   addKeyframesToDOM,
   getRandomFloat
 } from '../../utils/utils';
+import './Triangle.scss';
 
 const Triangle = ({
   cellSize,
@@ -14,7 +14,6 @@ const Triangle = ({
   index,
   id,
 }) => {
-
   const triangleSize = (cellSize * 0.85);
 
   // Triangle Background
@@ -39,7 +38,7 @@ const Triangle = ({
     'borderLeft': `solid ${triangleSize / 2}px transparent`,
     'borderRight': `solid ${triangleSize / 2}px transparent`,
     'borderBottom': `solid ${triangleSize}px`,
-    'border-bottom-color': fillColor1,
+    'borderBottomColor': fillColor1,
   };
 
   // Add animations
