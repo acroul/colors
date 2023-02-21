@@ -2,9 +2,9 @@
 
 # Lines, Shapes, & Colors
 
-Hello! I decided to have some fun programmatically creating geometric art. I've always been a fan of abstract art that features sharp lines, solid shapes, & vibrant colors. It's clean, it's calming, and it's accessible. With code, we can procedurally draw some dynamic and (hopefully) aesthetically pleasing artscapes. Thank you for taking a look!
+Hello! I decided to have some fun programmatically creating geometric art. I've always been a fan of abstract art that features sharp lines, solid shapes, & vibrant colors. With code, we can procedurally draw some dynamic and (hopefully) aesthetically pleasing artscapes. Thank you for taking a look!
 
-This repo comprises a React app that serves as a directory for several different artscapes (just one so far :smile:). Each artscape has a simple directive: given a few guidelines, randomly draw some neat, interesting geometric art. React serves to provide some heirarchy & structure to each artscape and to the project as a whole, but CSS might just be the star of the show.
+This repo comprises a React app that serves as a directory for several different artscapes (just one so far :smile:). Each artscape has a simple directive: given a few guidelines, randomly draw some neat, interesting geometric art..
 
 ## Artscapes
 

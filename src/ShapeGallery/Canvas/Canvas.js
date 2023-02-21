@@ -1,8 +1,11 @@
-import "./Canvas.scss";
+import { useState } from "react";
 import Shape from "../Shapes/Shape/Shape";
 import { getRenderBreakpointOptions } from "../utils/utils";
+import "./Canvas.scss";
 
 const Canvas = () => {
+  const [shapes, setShapes] = useState([]);
+
   const WINDOW_WIDTH = window.innerWidth;
   const WINDOW_HEIGHT = window.innerHeight;
 
@@ -29,10 +32,14 @@ const Canvas = () => {
     ));
   };
 
+  if (!shapes || shapes.length === 0) {
+    setShapes(drawShapes());
+  }
+
   return (
     <div className="CanvasContainer">
       <div className="Canvas" style={canvasStyles}>    
-        { drawShapes() }
+        { shapes }
       </div>
     </div>
   );

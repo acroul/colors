@@ -1,9 +1,9 @@
-import Canvas from './Canvas/Canvas'; 
+import Directory from './Directory/Directory';
 import './App.scss';
 
 const App = () => {
   return (
-    <Canvas />
+    <Directory />
   );
 };
 
